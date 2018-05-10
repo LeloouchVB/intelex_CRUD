@@ -1,3 +1,7 @@
+# Intelex/CRUD
+MERN application with CRUD operations. Design: Material-ui
+<br /> My first-application with React  :)
+
 ## Install
 
 1. clone repository or download ZIP
