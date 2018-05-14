@@ -38,20 +38,14 @@ const styles = {
     marginRight: 20
   },
   columns: {
-    id: {
+    w10: {
       width: "10%"
     },
-    name: {
-      width: "40%"
-    },
-    price: {
+    w20: {
       width: "20%"
     },
-    category: {
+    w15: {
       width: "15%"
-    },
-    edit: {
-      width: "20%"
     }
   }
 };
@@ -88,22 +82,22 @@ class All extends Component {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHeaderColumn style={styles.columns.price}>
+                <TableHeaderColumn style={styles.columns.w10}>
                   Id
                   </TableHeaderColumn>
-                <TableHeaderColumn style={styles.columns.price}>
+                <TableHeaderColumn style={styles.columns.w20}>
                   FIRST NAME
                 </TableHeaderColumn>
-                <TableHeaderColumn style={styles.columns.price}>
+                <TableHeaderColumn style={styles.columns.w20}>
                   LAST NAME
                 </TableHeaderColumn>
-                <TableHeaderColumn style={styles.columns.id}>
+                <TableHeaderColumn style={styles.columns.w20}>
                   EMAIL
                 </TableHeaderColumn>
-                <TableHeaderColumn style={styles.columns.category}>
+                <TableHeaderColumn style={styles.columns.w15}>
                   DATE
                 </TableHeaderColumn>
-                <TableHeaderColumn style={styles.columns.category}>
+                <TableHeaderColumn style={styles.columns.w15}>
                   ACTIONS
                 </TableHeaderColumn>
               </TableRow>
@@ -111,22 +105,22 @@ class All extends Component {
             <TableBody>
               {users ? users.map(user => (
                 <TableRow key={user._id}>
-                  <TableRowColumn style={styles.columns.price}>
+                  <TableRowColumn style={styles.columns.w10}>
                     <Link to={`/show/${user._id}`}>{user._id}</Link>
                   </TableRowColumn>
-                  <TableRowColumn style={styles.columns.price}>
+                  <TableRowColumn style={styles.columns.w20}>
                     {user.firstName}
                   </TableRowColumn>
-                  <TableRowColumn style={styles.columns.price}>
+                  <TableRowColumn style={styles.columns.w20}>
                     {user.lastName}
                   </TableRowColumn>
-                  <TableRowColumn style={styles.columns.id}>
+                  <TableRowColumn style={styles.columns.w20}>
                     {user.email}
                   </TableRowColumn>
-                  <TableRowColumn style={styles.columns.category}>
+                  <TableRowColumn style={styles.columns.w15}>
                     {moment(user.date).format("YYYY-MM-DD HH:mm")}
                   </TableRowColumn>
-                  <TableRowColumn style={styles.columns.category}>
+                  <TableRowColumn style={styles.columns.w15}>
                     <Link to={`/show/${user._id}`}>
                       <FloatingActionButton
                         mini={true}
